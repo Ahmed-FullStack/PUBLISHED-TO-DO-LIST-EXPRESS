@@ -1,0 +1,214 @@
+@import url('https://fonts.googleapis.com/css2?family=YouTube+Sans:wght@600&family=Google+Sans:wght@300;400;500;600;700;800;900&display=swap');
+
+
+body{
+    transition: all 120ms ease-out;
+    font-family: 'Google Sans';
+    overflow-x: hidden;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Google Sans';
+}
+
+.main-container{
+    width: 100vw;
+    height: 100vh;
+    overflow-x: hidden;
+    background-image: linear-gradient(25deg, rgb(148, 105, 196) 50%, rgb(168, 183, 231) 50%);
+    background-position: 200%;
+    display: flex;
+    flex-direction: column;
+    transition:     background-position 2000ms ease-out;
+    align-items: center;
+}
+
+.date-clr{
+    background-color: rgb(148, 105, 196);
+    width: 450px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 5px;
+    border-radius: 10px;
+    margin: 50px 0;
+    color: white;
+    box-shadow: 5px 2px 10px rgba(0 0  0 / .35);
+}
+
+.box{
+    background-color: white;
+    width: 400px;
+    padding: 40px 30px;
+    border-radius: 10px;
+    box-shadow: 5px 4px 13px rgba(0 0  0 / .35);
+    display: flex;
+    flex-direction: column;
+}
+
+.item{
+    font-size: 1.3rem;
+    display: flex;
+    align-items: center;
+    min-height: 70px;
+    position: relative;
+    padding: 0 0 10px;
+    margin: 0 0 15px;
+}
+
+.item::after{
+    position: absolute;
+    top: 88%;
+    right: 7%;
+    width: 255px;
+    height: 3px;
+    background-color: purple;
+    content: '';
+}
+
+
+input[type="checkbox"]{
+    margin: 20px 65px 20px 20px;
+    width: 20px;
+    height: 20px;
+
+}
+
+input:checked+p{
+    text-decoration-color: purple;
+    text-decoration: line-through;
+}
+
+p{
+    padding: 0 0px 0 12px;
+    transition: all 300ms ease-out;
+}
+
+.item-i{
+    margin-top: 45px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 436px;
+}
+
+
+input[type="text"]{
+    outline: none;
+    border: none;
+    background-color: rgb(233, 241, 255);
+    padding: 20px 15px;
+    text-align: center;
+    font-size: 1.3rem; 
+}
+
+.clr-container{
+    background-image: linear-gradient(45deg, rgb(148, 105, 196) 50%, rgb(168, 183, 231) 50%);
+    background-position: 120%;
+    transition: background-position 2000ms ease-out;
+}
+
+input[type="text"]:focus{
+    outline: none;
+    box-shadow: inset 0px -3px 0px 0px #A683E3;
+    transform-origin: center;
+    transition: all 100ms ease-out;
+}
+
+button{
+    width: 50px;
+    height: 50px;
+    background-color: #A683E3;
+    font-size: 2.3rem;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    transition: all 100ms ease-out;
+}
+
+button:hover, button:focus{
+    background-color: hsl(262, 63%, 78%);
+    transition: all 100ms ease-out;
+}
+
+button:active{
+    background-color: hsl(262, 63%, 66%);
+    transform: scale(0.8);
+    transition: all 100ms ease-out;
+}
+
+
+::-webkit-scrollbar{
+    width: 0.4rem;
+}
+
+::-webkit-scrollbar-track{
+    background-color: rgb(148, 105, 196);
+}
+
+::-webkit-scrollbar-thumb{
+    background-color: rgb(233, 241, 255);
+}
+
+p{
+    overflow-wrap: break-word;
+    width: 250px;
+}
+
+
+@media (max-width: 500px){
+    .date-clr{
+        max-width: 350px;
+    }
+    .box{
+        max-width: 340px;
+        padding: 40px 10px;
+    }
+
+    .item::after{
+        position: absolute;
+        top: 88%;
+        right: 10%;
+        width: 215px;
+        height: 3px;
+        background-color: purple;
+        content: '';
+    }
+
+    
+    input[type="checkbox"]{
+        margin: 20px 40px 20px 20px;
+    }
+
+    input[type="text"]{
+        padding: 20px 0px;
+    }
+
+
+    .item-i{
+        margin-top: 45px;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        width: 359px;
+    }
+
+    button{
+        padding: 25px 15px;
+        height: 0;
+        background-color: #A683E3;
+        font-size: 2.3rem;
+        color: white;
+        border: none;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: all 100ms ease-out;
+    }
+}
