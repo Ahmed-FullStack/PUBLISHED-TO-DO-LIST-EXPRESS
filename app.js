@@ -159,7 +159,7 @@ app.post('/delete', (req, res) => {
 
     } else{
 
-        List.findOneAndUpdate({name: listName}, {$pull: {items: {_id: checkedItemId.trim()}}}, function(err, foundList) {
+        List.findOneAndUpdate({name: listName}, {$pull: {items: {_id: checboxth.trim()}}}, function(err, foundList) {
           
             if(!err){
                 res.redirect("/"+listName);
