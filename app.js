@@ -72,6 +72,7 @@ app.get("/", (req, res) => {
 
         } else {
             res.render('list', {listTitle: today, newListItems: foundItems});
+            console.log(foundItems);
         }
 })
 
