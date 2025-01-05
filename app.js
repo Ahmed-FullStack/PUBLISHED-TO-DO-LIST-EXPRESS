@@ -15,7 +15,7 @@ app.set('view engine', 'ejs');
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static(__dirname + '/static'));
 
-mongoose.connect(process.env.API.toString());
+mongoose.connect(process.env.API);
 
 // mongoose.connect('mongodb://localhost:27017/todolistDB');
 
