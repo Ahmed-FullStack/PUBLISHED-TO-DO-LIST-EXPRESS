@@ -47,20 +47,20 @@ const List = mongoose.model('List', listSchema);
 
 app.get('/', (req, res) => {
 	Item.find((err, foundItems) => {
-		if (foundItems.length === 0) {
-			Item.insertMany(defaultItems, er => {
-				if (er) {
-					console.log('error');
-				} else {
-					console.log('Successfully');
-				}
+		// if (foundItems.length === 0) {
+		// 	Item.insertMany(defaultItems, er => {
+		// 		if (er) {
+		// 			console.log('error');
+		// 		} else {
+		// 			console.log('Successfully');
+		// 		}
 
-				res.redirect('/');
-			});
-		} else {
-			res.render('list', { listTitle: today, newListItems: foundItems });
-			console.log(foundItems);
-		}
+		// 		res.redirect('/');
+		// 	});
+		// } else {
+		res.render('list', { listTitle: today, newListItems: foundItems });
+		console.log(foundItems);
+		// }
 	});
 });
 
